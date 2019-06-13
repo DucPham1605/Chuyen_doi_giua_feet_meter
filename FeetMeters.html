@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<p>
+    <label>Convert an unit from meters of feet</label>
+    <input id="converter" type="number" placeholder="Converter" oninput="convert(this.value)" onchange="convert(this.value)" >
+    <br><br>
+    <input type="radio" name="unit" id="meters" > To Meters <br>
+    <input type="radio" name="unit" id= "feet">  To Feet <br>
+
+    <span id="result" ></span>
+
+</p>
+<script>
+    function convert(unit){
+        unit = parseFloat(unit);
+        if (document.getElementById("meters").checked) {
+            document.getElementById("result").innerHTML = 0.305 * unit;
+
+
+        }
+        else if (document.getElementById("feet").checked) {
+            document.getElementById("result").innerHTML = 3.279 * unit;
+        }
+    }
+</script>
+</body>
+</html>
